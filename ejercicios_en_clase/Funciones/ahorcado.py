@@ -1,4 +1,4 @@
-import ejercicios_en_clase_fc
+import ejercicios_en_clase_functions
 import random
 
 phrases_list = ['programacion', 'laboratorio', 'matematica', 'ingles', 'spd', 'algoritmos', 'funciones', 'bucles', 'condicionales']     # Lista de palabras
@@ -25,7 +25,7 @@ while attempts != 0:
         else:
             letters_input.append(letter)
 
-        phrase_hidden = ejercicios_en_clase_fc.replace_letter(phrase, phrase_hidden, letter)
+        phrase_hidden = ejercicios_en_clase_functions.replace_letter(phrase, phrase_hidden, letter)
 
         if '_' not in phrase_hidden:        # Si dentro de la variable frase oculta ya no encuentra ningun guion bajo significa que el usuario adivino la palabra, por ende muestra un mensaje de victoria y utiliza un break para cortar el ciclo
             print('\nFELICIDADES, GANASTE EL JUEGO!')

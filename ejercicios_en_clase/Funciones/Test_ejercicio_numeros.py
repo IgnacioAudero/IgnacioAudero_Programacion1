@@ -1,5 +1,5 @@
 import pytest
-from ejercicios_en_clase_fc import addition_digit
+from ejercicios_en_clase_functions import addition_digit
 
 @pytest.mark.parametrize("number, res", [
     (54, 9),
