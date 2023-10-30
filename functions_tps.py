@@ -165,3 +165,38 @@ def insertion_sort(word_list):
             j -= 1
         word_list[j + 1] = word
     return word_list
+
+def counter_digit(number):
+    if number < 10:
+        return 1
+    else:
+        return 1 + counter_digit(number // 10)
+
+def even(num):
+    if num == 0:
+        return True
+    else:
+        return odd(num - 1)
+
+def odd(num):
+    if num == 0:
+        return False
+    else:
+        return even(num - 1)
+
+def find_higher(number_list):
+    if len(number_list) == 1:
+        return number_list[0]
+    else:
+        is_higher = find_higher(number_list[1:])
+
+        if number_list[0] > is_higher:
+            return number_list[0]
+        else:
+            return is_higher
+
+def duplicate_list(number_list, duplicate):
+    if duplicate == 1 or not number_list:
+        return number_list
+    else:
+        return [number_list[0]] * duplicate + duplicate_list(number_list[1:], duplicate)
