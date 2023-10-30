@@ -122,3 +122,46 @@ def addition_digit(number):
         addition_number += digits
 
     return addition_number
+
+def bubble_sort(number_list):
+    swap = True
+
+    while swap:
+        swap = False
+        for i in range(len(number_list) - 1):
+            if number_list[i] > number_list[i + 1]:
+                number_list[i], number_list[i + 1] = number_list[i + 1], number_list[i]
+                swap = True
+
+    return number_list
+
+def bubble_sort_descending(number_list):
+    swap = True
+
+    while swap:
+        swap = False
+        for i in range(len(number_list) - 1):
+            if number_list[i] < number_list[i + 1]:
+                number_list[i], number_list[i + 1] = number_list[i + 1], number_list[i]
+                swap = True
+
+    return number_list
+
+def selection_sort(word_list):
+    for i in range(len(word_list)):
+        lowest = i
+        for j in range(i + 1, len(word_list)):
+            if word_list[j] < word_list[lowest]:
+                lowest = j
+        word_list[i], word_list[lowest] = word_list[lowest], word_list[i]
+
+    return word_list
+def insertion_sort(word_list):
+    for i in range(1, len(word_list)):
+        word = word_list[i]
+        j = i - 1
+        while j >= 0 and len(word) < len(word_list[j]):
+            word_list[j + 1] = word_list[j]
+            j -= 1
+        word_list[j + 1] = word
+    return word_list
